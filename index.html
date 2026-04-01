@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="style.css">
     <!-- EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
@@ -119,128 +120,217 @@
                 <h2>Skills</h2>
                 <div class="header-line"></div>
             </div>
-            <div class="skills-grid">
-                <!-- Programming Languages -->
-                <div class="skill-category">
-                    <h3><i class="fas fa-laptop-code"></i> Programming Languages</h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span>Python</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
+            
+            <!-- Programming Languages Category -->
+            <div class="skills-category">
+                <h3 class="category-title"><i class="fas fa-laptop-code"></i> Programming Languages</h3>
+                <div class="skills-cards-grid">
+                    <div class="skill-card" data-skill="Python" data-proficiency="90">
+                        <div class="skill-icon-wrapper">
+                            <i class="devicon-python-plain colored"></i>
                         </div>
-                        <div class="skill-item">
-                            <span>JavaScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
+                        <h4 class="skill-name">Python</h4>
+                        <div class="skill-proficiency">
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 90%"></div>
                             </div>
+                            <span class="proficiency-text">90%</span>
                         </div>
-                        <div class="skill-item">
-                            <span>Java</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
+                        <div class="skill-tooltip">Advanced - Data Science & ML</div>
+                    </div>
+
+                    <div class="skill-card" data-skill="JavaScript" data-proficiency="85">
+                        <div class="skill-icon-wrapper">
+                            <i class="devicon-javascript-plain colored"></i>
+                        </div>
+                        <h4 class="skill-name">JavaScript</h4>
+                        <div class="skill-proficiency">
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 85%"></div>
                             </div>
+                            <span class="proficiency-text">85%</span>
                         </div>
-                        <div class="skill-item">
-                            <span>C++</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
+                        <div class="skill-tooltip">Advanced - Web Development</div>
+                    </div>
+
+                    <div class="skill-card" data-skill="Java" data-proficiency="80">
+                        <div class="skill-icon-wrapper">
+                            <i class="devicon-java-plain colored"></i>
+                        </div>
+                        <h4 class="skill-name">Java</h4>
+                        <div class="skill-proficiency">
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 80%"></div>
                             </div>
+                            <span class="proficiency-text">80%</span>
                         </div>
-                        <div class="skill-item">
-                            <span>C</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
+                        <div class="skill-tooltip">Intermediate - OOP & DSA</div>
+                    </div>
+
+                    <div class="skill-card" data-skill="C++" data-proficiency="75">
+                        <div class="skill-icon-wrapper">
+                            <i class="devicon-cplusplus-plain colored"></i>
+                        </div>
+                        <h4 class="skill-name">C++</h4>
+                        <div class="skill-proficiency">
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 75%"></div>
                             </div>
+                            <span class="proficiency-text">75%</span>
                         </div>
+                        <div class="skill-tooltip">Intermediate - Competitive</div>
+                    </div>
+
+                    <div class="skill-card" data-skill="C" data-proficiency="80">
+                        <div class="skill-icon-wrapper">
+                            <i class="devicon-c-plain colored"></i>
+                        </div>
+                        <h4 class="skill-name">C</h4>
+                        <div class="skill-proficiency">
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 80%"></div>
+                            </div>
+                            <span class="proficiency-text">80%</span>
+                        </div>
+                        <div class="skill-tooltip">Intermediate - Fundamentals</div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Web Technologies -->
-                <div class="skill-category">
-                    <h3><i class="fas fa-globe"></i> Web Technologies</h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span>HTML5</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
+            <!-- Web Technologies Category -->
+            <div class="skills-category">
+                <h3 class="category-title"><i class="fas fa-globe"></i> Web Technologies</h3>
+                <div class="skills-cards-grid">
+                    <div class="skill-card" data-skill="HTML5" data-proficiency="95">
+                        <div class="skill-icon-wrapper">
+                            <i class="devicon-html5-plain colored"></i>
                         </div>
-                        <div class="skill-item">
-                            <span>CSS3</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
+                        <h4 class="skill-name">HTML5</h4>
+                        <div class="skill-proficiency">
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 95%"></div>
                             </div>
+                            <span class="proficiency-text">95%</span>
                         </div>
-                        <div class="skill-item">
-                            <span>React</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
+                        <div class="skill-tooltip">Expert - Semantic Markup</div>
+                    </div>
+
+                    <div class="skill-card" data-skill="CSS3" data-proficiency="90">
+                        <div class="skill-icon-wrapper">
+                            <i class="devicon-css3-plain colored"></i>
+                        </div>
+                        <h4 class="skill-name">CSS3</h4>
+                        <div class="skill-proficiency">
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 90%"></div>
                             </div>
+                            <span class="proficiency-text">90%</span>
                         </div>
-                        <div class="skill-item">
-                            <span>Node.js</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
+                        <div class="skill-tooltip">Expert - Responsive Design</div>
+                    </div>
+
+                    <div class="skill-card" data-skill="React" data-proficiency="85">
+                        <div class="skill-icon-wrapper">
+                            <i class="devicon-react-plain colored"></i>
+                        </div>
+                        <h4 class="skill-name">React</h4>
+                        <div class="skill-proficiency">
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 85%"></div>
                             </div>
+                            <span class="proficiency-text">85%</span>
                         </div>
+                        <div class="skill-tooltip">Advanced - Component Dev</div>
+                    </div>
+
+                    <div class="skill-card" data-skill="Node.js" data-proficiency="80">
+                        <div class="skill-icon-wrapper">
+                            <i class="devicon-nodejs-plain colored"></i>
+                        </div>
+                        <h4 class="skill-name">Node.js</h4>
+                        <div class="skill-proficiency">
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 80%"></div>
+                            </div>
+                            <span class="proficiency-text">80%</span>
+                        </div>
+                        <div class="skill-tooltip">Intermediate - Backend</div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Tools & Platforms -->
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span>GitHub</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
+            <!-- Tools & Platforms Category -->
+            <div class="skills-category">
+                <h3 class="category-title"><i class="fas fa-tools"></i> Tools & Platforms</h3>
+                <div class="skills-cards-grid">
+                    <div class="skill-card" data-skill="GitHub" data-proficiency="85">
+                        <div class="skill-icon-wrapper">
+                            <i class="devicon-github-original colored"></i>
                         </div>
-                        <div class="skill-item">
-                            <span>VS Code</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
+                        <h4 class="skill-name">GitHub</h4>
+                        <div class="skill-proficiency">
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 85%"></div>
                             </div>
+                            <span class="proficiency-text">85%</span>
                         </div>
-                        <div class="skill-item">
-                            <span>SQL</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Git</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
+                        <div class="skill-tooltip">Advanced - Version Control</div>
                     </div>
-                </div>
 
-                <!-- Specialized Skills -->
-                <div class="skill-category">
-                    <h3><i class="fas fa-star"></i> Specialized Skills</h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span>Data Analysis</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
+                    <div class="skill-card" data-skill="VS Code" data-proficiency="90">
+                        <div class="skill-icon-wrapper">
+                            <i class="devicon-vscode-plain colored"></i>
                         </div>
-                        <div class="skill-item">
-                            <span>Full-Stack Development</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
+                        <h4 class="skill-name">VS Code</h4>
+                        <div class="skill-proficiency">
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 90%"></div>
                             </div>
+                            <span class="proficiency-text">90%</span>
                         </div>
-                        <div class="skill-item">
-                            <span>Problem Solving</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
+                        <div class="skill-tooltip">Expert - IDE Mastery</div>
+                    </div>
+
+                    <div class="skill-card" data-skill="Git" data-proficiency="85">
+                        <div class="skill-icon-wrapper">
+                            <i class="devicon-git-plain colored"></i>
+                        </div>
+                        <h4 class="skill-name">Git</h4>
+                        <div class="skill-proficiency">
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 85%"></div>
                             </div>
+                            <span class="proficiency-text">85%</span>
                         </div>
+                        <div class="skill-tooltip">Advanced - Branching & Merge</div>
+                    </div>
+
+                    <div class="skill-card" data-skill="SQL" data-proficiency="80">
+                        <div class="skill-icon-wrapper">
+                            <i class="devicon-mysql-plain colored"></i>
+                        </div>
+                        <h4 class="skill-name">SQL</h4>
+                        <div class="skill-proficiency">
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 80%"></div>
+                            </div>
+                            <span class="proficiency-text">80%</span>
+                        </div>
+                        <div class="skill-tooltip">Intermediate - Databases</div>
+                    </div>
+
+                    <div class="skill-card" data-skill="Excel" data-proficiency="80">
+                        <div class="skill-icon-wrapper">
+                            <i class="devicon-microsoftexcel-plain colored"></i>
+                        </div>
+                        <h4 class="skill-name">Excel</h4>
+                        <div class="skill-proficiency">
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 80%"></div>
+                            </div>
+                            <span class="proficiency-text">80%</span>
+                        </div>
+                        <div class="skill-tooltip">Intermediate - Data Analysis</div>
                     </div>
                 </div>
             </div>

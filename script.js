@@ -109,6 +109,10 @@ function setupScrollAnimations() {
                     const index = Array.from(entry.target.parentElement.children).indexOf(entry.target);
                     entry.target.style.animationDelay = `${index * 0.1}s`;
                 }
+                if (entry.target.classList.contains('skill-card')) {
+                    const index = Array.from(entry.target.parentElement.children).indexOf(entry.target);
+                    entry.target.style.animationDelay = `${index * 0.05}s`;
+                }
                 if (entry.target.classList.contains('project-card')) {
                     const index = Array.from(entry.target.parentElement.children).indexOf(entry.target);
                     entry.target.style.animationDelay = `${index * 0.1}s`;
@@ -123,9 +127,41 @@ function setupScrollAnimations() {
 
     // Observe elements for scroll animation
     const elementsToObserve = document.querySelectorAll(
-        '.skill-category, .project-card, .info-card, .education-card, .highlight-card'
+        '.skill-category, .skill-card, .project-card, .info-card, .education-card, .highlight-card'
     );
     elementsToObserve.forEach(element => observer.observe(element));
+    
+    // Setup skill card hover effects and tooltips
+    setupSkillCardInteractions();
+}
+
+// ========== SKILL CARD INTERACTIONS ==========
+function setupSkillCardInteractions() {
+    const skillCards = document.querySelectorAll('.skill-card');
+    
+    skillCards.forEach(card => {
+        // Get proficiency value from data attribute
+        const proficiency = card.getAttribute('data-proficiency');
+        const skillName = card.getAttribute('data-skill');
+        
+        // Animate proficiency fill on page load
+        card.addEventListener('animationend', () => {
+            const proficiencyFill = card.querySelector('.proficiency-fill');
+            if (proficiencyFill && proficiencyFill.style.width === '') {
+                proficiencyFill.style.width = proficiency + '%';
+            }
+        });
+        
+        // Add hover event listeners for enhanced effects
+        card.addEventListener('mouseenter', () => {
+            // Trigger glow effect
+            card.style.setProperty('--glow-opacity', '1');
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.setProperty('--glow-opacity', '0');
+        });
+    });
 }
 
 // ========== CONTACT FORM ==========
