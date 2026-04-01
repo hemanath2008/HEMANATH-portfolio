@@ -1,0 +1,29 @@
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Node modules (if you add npm later)
+node_modules/
+package-lock.json
+
+# Build artifacts
+dist/
+build/
+*.log
+
+# IDE
+.vscode
+.idea
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
