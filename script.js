@@ -834,6 +834,19 @@ async function sendEmail(name, email, message) {
         submitButton.disabled = true;
         submitButton.textContent = 'Sending...';
 
+        // Check if EmailJS is configured
+        if (EMAIL_PUBLIC_KEY === 'YOUR_PUBLIC_KEY' || EMAIL_SERVICE_ID === 'YOUR_SERVICE_ID' || EMAIL_TEMPLATE_ID === 'YOUR_TEMPLATE_ID') {
+            showErrorMessage('⚠️ EmailJS is not configured. Please add your credentials to script.js (lines 7-9)');
+            console.error('EmailJS Configuration Error:', {
+                serviceId: EMAIL_SERVICE_ID === 'YOUR_SERVICE_ID' ? '❌ Missing' : '✅ Configured',
+                templateId: EMAIL_TEMPLATE_ID === 'YOUR_TEMPLATE_ID' ? '❌ Missing' : '✅ Configured',
+                publicKey: EMAIL_PUBLIC_KEY === 'YOUR_PUBLIC_KEY' ? '❌ Missing' : '✅ Configured'
+            });
+            submitButton.disabled = false;
+            submitButton.textContent = 'Send Message';
+            return;
+        }
+
         const response = await emailjs.send(EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, {
             from_name: name,
             from_email: email,
@@ -841,7 +854,7 @@ async function sendEmail(name, email, message) {
         });
 
         if (response.status === 200) {
-            showSuccessMessage('Message sent successfully! I\'ll get back to you soon.');
+            showSuccessMessage('✅ Message sent successfully! I\'ll get back to you soon.');
             document.getElementById('contactForm').reset();
 
             // Animate success feedback
@@ -860,7 +873,8 @@ async function sendEmail(name, email, message) {
             }, 4000);
         }
     } catch (error) {
-        showErrorMessage('Failed to send message. Please try again.');
+        console.error('Email sending error:', error);
+        showErrorMessage('❌ Failed to send message: ' + (error.text || error.message || 'Unknown error. Check EmailJS configuration.'));
     } finally {
         submitButton.disabled = false;
         submitButton.textContent = 'Send Message';
